@@ -109,10 +109,10 @@ public class Problem13 {
         BigInteger totalSum = new BigInteger("0");
 
         for (int i = 0; i < given.length; i++) {
-            System.out.println(given[i]);
             totalSum = totalSum.add(given[i]);
         }
 
+        System.out.println("TOTAL SUM");
         System.out.println(totalSum);
         String totalSumString = totalSum.toString();
 
