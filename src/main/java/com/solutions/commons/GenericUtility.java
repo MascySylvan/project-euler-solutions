@@ -63,14 +63,14 @@ public class GenericUtility {
 	}
 	
 	public static boolean isPythTriple(int a, int b, int c) {
-		return raiseToThePower(a, 2) + raiseToThePower(b, 2) == raiseToThePower(c, 2);
+		return raiseToThePower(a, 2).add(raiseToThePower(b, 2)) == raiseToThePower(c, 2);
 	}
 	
-	public static long raiseToThePower(long base, long exp) {
-		long a = 1;
+	public static BigInteger raiseToThePower(long base, long exp) {
+		BigInteger a = BigInteger.valueOf(1);
 		
 		for (long i = 0; i < exp; i++) {
-			a *= base;
+			a = a.multiply(BigInteger.valueOf(base));
 		}
 		
 		return a;
