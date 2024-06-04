@@ -74,4 +74,16 @@ public class GenericUtility {
 		
 		return a;
 	}
+
+	public static long collatz(long temp) {
+		long num = 1;
+
+		if (temp % 2 == 0) { //even
+			num = temp / 2;
+		} else { //odd
+			num = (3 * temp) + 1;
+		}
+
+		return num;
+	}
 }
