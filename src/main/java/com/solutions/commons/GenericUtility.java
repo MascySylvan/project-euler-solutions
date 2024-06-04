@@ -1,5 +1,6 @@
 package com.solutions.commons;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
@@ -85,5 +86,15 @@ public class GenericUtility {
 		}
 
 		return num;
+	}
+
+	public static BigInteger factorial(long num) {
+		BigInteger n = new BigInteger("1");
+
+		for (long i = 1; i <= num; i++) {
+			n = n.multiply(BigInteger.valueOf(i));
+		}
+
+		return n;
 	}
 }
